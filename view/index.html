@@ -32,9 +32,7 @@
 	
 	<!-- jQuery Scripts -->
 	<script type="text/javascript" src="/js/scripts-top.js"></script>		
-
-	<script type="text/javascript" src="/js/template-changer.js"></script><style type="text/css"></style>			
-
+	<script type="text/javascript" src="/js/template-changer.js"></script>		
     <script type="text/javascript" charset="UTF-8" src="/js/common.js"></script>
     <script type="text/javascript" charset="UTF-8" src="/js/map.js"></script>
     <script type="text/javascript" charset="UTF-8" src="/js/util.js"></script>
@@ -42,293 +40,56 @@
     <script type="text/javascript" charset="UTF-8" src="/js/infowindow.js"></script>
     <script type="text/javascript" charset="UTF-8" src="/js/onion.js"></script>
     <script type="text/javascript" charset="UTF-8" src="/js/controls.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="/js/stats.js">
-    </script><script type="text/javascript" charset="UTF-8" src="/AuthenticationService.Authenticate"></script></head> 
+    <script type="text/javascript" charset="UTF-8" src="/js/stats.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="/js/fb.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="/AuthenticationService.Authenticate"></script>
+</head> 
 
 <body> 
-	<!-- preloader-->
-	<div class="whitebg" style="display: none;">
-		<div id="spinner" style="display: none;"></div>
-	</div>
+<img src="http://hayageek.com/examples/oauth/facebook/oauth-javascript/LoginWithFacebook.png" style="cursor:pointer;" onclick="Login1()"/>
+<img src="http://hayageek.com/examples/oauth/facebook/oauth-javascript/LoginWithFacebook.png" style="cursor:pointer;" onclick="Login()"/>
 
-	<div class="theme-changer-wrap">
-		<div class="theme-changer">
-			<div class="changer-inner">
 
-				<span>Color schemes</span>
-				<div id="stylesw" style="">
-				<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles1" class="color-themes col1" id="styles1"></a>
-				<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles2" class="color-themes col2" id="styles2"></a>
-				<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles3" class="color-themes col3" id="styles3"></a>
-				<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles4" class="color-themes col4" id="styles4"></a>
-				<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles5" class="color-themes col5" id="styles5"></a>
-				<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles6" class="color-themes col6" id="styles6"></a>
-				</div>
-				<div style="clear:both"></div>
-				<span style="padding-top:25px;">Slider Versions</span>
-				<form>
-					<select name="URL" onchange="window.location.href=this.form.URL.options[this.form.URL.selectedIndex].value">
-						<option value="index.html" selected="selected">FullScreen Image Slider</option>
-						<option value="index-fullwidth.html">FullWidth Slider</option>
-						<option value="index-video.html">FullScreen Video Slider</option>
-					</select>
-				</form>				
+<!-- preloader-->
+<div class="whitebg" style="display: none;">
+	<div id="spinner" style="display: none;"></div>
+</div>
+
+<div class="theme-changer-wrap">
+	<div class="theme-changer">
+		<div class="changer-inner">
+
+			<span>Color schemes</span>
+			<div id="stylesw" style="">
+			<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles1" class="color-themes col1" id="styles1"></a>
+			<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles2" class="color-themes col2" id="styles2"></a>
+			<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles3" class="color-themes col3" id="styles3"></a>
+			<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles4" class="color-themes col4" id="styles4"></a>
+			<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles5" class="color-themes col5" id="styles5"></a>
+			<a href="http://www.deliciousthemes.com/demo/patti/#" rel="styles6" class="color-themes col6" id="styles6"></a>
 			</div>
+			<div style="clear:both"></div>
+			<span style="padding-top:25px;">Slider Versions</span>
+			<form>
+				<select name="URL" onchange="window.location.href=this.form.URL.options[this.form.URL.selectedIndex].value">
+					<option value="index.html" selected="selected">FullScreen Image Slider</option>
+					<option value="index-fullwidth.html">FullWidth Slider</option>
+					<option value="index-video.html">FullScreen Video Slider</option>
+				</select>
+			</form>				
 		</div>
-		<div class="open-close"></div>
-	</div> 	
-	
-	<header id="header" class="solid-header scrolled-header" style="padding-top: 15px; padding-bottom: 15px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 3px; background: rgba(255, 255, 255, 0.952941);">
-		<div class="centered-wrapper">
-		
-			<div class="percent-one-fourth">
-				<div class="logo"><a href="http://www.deliciousthemes.com/demo/patti/index.html"><img src="/img/logo.png" alt="" style="height: 30px; width: auto;"></a></div>
-			</div><!--end one-fourth-->
-			
-			<a class="nav-btn"><i class="fa fa-bars"></i></a>
-			
-			<div class="percent-three-fourth column-last">					
-				<nav id="navigation" class="desktop">
-					<ul id="mainnav" class="sf-menu sf-js-enabled sf-arrows" style="padding-top: 2px;">
-						<li class="" style="overflow: visible;"><a href="http://www.deliciousthemes.com/demo/patti/index.html/#hello"><span>HELLO</span></a></li>
-						<li class="" style="overflow: visible;"><a href="http://www.deliciousthemes.com/demo/patti/index.html#about"><span>ABOUT</span></a></li>
-						<li class="" style="overflow: visible;"><a href="http://www.deliciousthemes.com/demo/patti/index.html#work"><span>WORK</span></a></li>						
-						<li style="overflow: visible;"><a href="http://www.deliciousthemes.com/demo/patti/index.html#services"><span>SERVICES</span></a></li>
-						<li class="current" style="overflow: visible;"><a href="http://www.deliciousthemes.com/demo/patti/index.html#blog"><span>JOURNAL</span></a></li>
-						<li style="overflow: visible;"><a href="http://www.deliciousthemes.com/demo/patti/#extra" class="sf-with-ul"><span>EXTRA</span></a>
-							<ul style="display: none;">
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/elements.html" style="background: rgba(255, 255, 255, 0.952941);">Elements</a></li>							
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/portfolio-item-1.html" style="background: rgba(255, 255, 255, 0.952941);">Portfolio Item 1</a></li>							
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/portfolio-item-2.html" style="background: rgba(255, 255, 255, 0.952941);">Portfolio Item 2</a></li>							
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/portfolio-item-3.html" style="background: rgba(255, 255, 255, 0.952941);">Portfolio Item 3</a></li>							
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/portfolio-item-4.html" style="background: rgba(255, 255, 255, 0.952941);">Portfolio Item 4</a></li>							
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/portfolio-item-5.html" style="background: rgba(255, 255, 255, 0.952941);">Portfolio Item 5</a></li>							
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/blog-masonry-3-columns.html" style="background: rgba(255, 255, 255, 0.952941);">Blog - Masonry 3 Cols</a></li>
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/blog-masonry-2-columns.html" style="background: rgba(255, 255, 255, 0.952941);">Blog - Masonry 2 Cols</a></li>
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/blog-masonry-2-columns-sidebar.html" style="background: rgba(255, 255, 255, 0.952941);">Blog - Masonry 2 Cols + Sidebar</a></li>
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/blog.html" style="background: rgba(255, 255, 255, 0.952941);">Blog - Regular Layout</a></li>
-								<li style="overflow: visible;"><a class="external" href="http://www.deliciousthemes.com/demo/patti/blog-single.html" style="background: rgba(255, 255, 255, 0.952941);">Blog - Single</a></li>
-							</ul>
-						</li>							
-						<li style="overflow: visible;"><a href="http://www.deliciousthemes.com/demo/patti/index.html#contact"><span>CONTACT</span></a></li>
-					</ul>
-				</nav><!--end navigation-->
-			</div><!--end three-fourth-->
-			<div class="clear"></div>			
-		</div><!--end centered-wrapper-->
-	</header>	
+	</div>
+	<div class="open-close"></div>
+</div> 	
 	
 <div id="wrapper">
-
-	<!-- HELLO SECTION -->
-	
-	<section id="hello">
-	
-	<div class="menu-fixer" style="height: 115px;"></div>
-	
-		<div class="fullscreenbanner-container" style="max-height: none; overflow: visible; height: 859px;">
-			<div class="fullscreenbanner revslider-initialised tp-simpleresponsive" id="revslider-348" style="height: 100%; max-height: none;">
-				<ul style="display: block; overflow: hidden; width: 100%; height: 100%; max-height: none;">
-					
-					<!-- THE FIRST SLIDE -->
-					<li data-transition="fade" data-slotamount="15" data-masterspeed="0" style="width: 100%; height: 100%; overflow: hidden; visibility: visible; left: 0px; top: 0px; z-index: 18; opacity: 1; position: absolute;">
-						<div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" data-src="images/slides/slide33.jpg" style="width: 100%; height: 100%; opacity: 0; position: relative; background-image: url(http://www.deliciousthemes.com/demo/patti/images/slides/slide33.jpg); background-color: rgba(0, 0, 0, 0); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div></div>
-						
-						<!-- THE CAPTIONS IN THIS SLIDE -->
-						<div class="caption tp-resizeme big-text lft ltt tp-caption start" data-x="center" data-y="center" data-speed="300" data-start="500" data-easing="easeOutExpo" style="font-size: 14px; padding: 0px; margin: 0px; border-width: 0px; line-height: 22px; white-space: nowrap; min-width: 0px; min-height: 0px; visibility: visible; opacity: 0; top: 349px; left: 248px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.00166, 0, -60, 0, 1);">
-								<h1 style="font-size: 44px; padding: 18px 28px; margin: 0px 0px 11.9205357142857px; border-width: 1px; line-height: 33px; white-space: nowrap; min-width: 0px; min-height: 0px;">We Are Patti Studio</h1>
-								<div class="fancy-caption" style="width: 365px; font-size: 14px; padding: 5px 0px 0px; margin: 0px 76.1080357142857px; border-width: 0px; line-height: 22px; white-space: nowrap; min-width: 0px; min-height: 0px;">
-									<div class="fancy-slider-info" style="font-size: 13px; padding: 0px; margin: 0px; border-width: 0px; line-height: 37px; white-space: nowrap; min-width: 0px; min-height: 0px;">Since 2008</div>
-									<div class="fancy-slider-caption" style="font-size: 20px; padding: 0px; margin: 0px; border-width: 0px; line-height: 37px; white-space: nowrap; min-width: 0px; min-height: 0px;">Serving Web Design</div>
-								</div>
-						</div>						
-					</li>	
-					
-					<!-- THE SECOND SLIDE -->
-					<li data-transition="slidedown" data-slotamount="15" data-masterspeed="300" style="width: 100%; height: 100%; overflow: hidden; visibility: visible; left: 0px; top: 0px; z-index: 20; opacity: 1; position: absolute;">
-						<div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" data-src="images/slides/slide11.jpg" style="width: 100%; height: 100%; opacity: 1; background-image: url(http://www.deliciousthemes.com/demo/patti/images/slides/slide11.jpg); background-color: rgba(0, 0, 0, 0); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div></div>
-						
-						<div class="caption tp-resizeme big-text lft ltt tp-caption start" data-x="center" data-y="center" data-speed="300" data-start="500" data-easing="easeOutExpo" style="font-size: 14px; padding: 0px; margin: 0px; border-width: 0px; line-height: 22px; white-space: nowrap; min-width: 0px; min-height: 0px; visibility: visible; opacity: 1; top: 388px; left: 167px; transform: none;"><h1 style="font-size: 44px; padding: 18px 28px; margin: 0px 0px 11.9205357142857px; border-width: 1px; line-height: 33px; white-space: nowrap; min-width: 0px; min-height: 0px;">It All Starts with a Vision</h1></div>
-									
-					</li>
-					
-					<!-- THE THIRD SLIDE -->
-					<li data-transition="fade" data-slotamount="15" data-masterspeed="300" style="width: 100%; height: 100%; overflow: hidden; visibility: visible; left: 0px; top: 0px; z-index: 18; opacity: 0;">						
-						<div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined"><div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" data-src="images/slides/slide44.jpg" style="width: 100%; height: 100%; opacity: 0; background-image: url(http://www.deliciousthemes.com/demo/patti/images/slides/slide44.jpg); background-color: rgba(0, 0, 0, 0); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"></div></div>
-																
-						<!-- THE CAPTIONS IN THIS SLDIE -->
-						<div class="caption tp-resizeme big-text lft ltt tp-caption start" data-x="center" data-y="center" data-speed="300" data-start="500" data-easing="easeOutExpo"><h1>We Just Love What We Do</h1></div>
-									
-					</li>				
-		
-				</ul>
-				<!-- Slider Timer Banner-->
-				<!--<div class="tp-bannertimer"></div>-->
-				
-			<div class="tp-loader" style="display: none;"></div><div class="tp-bannertimer" style="visibility: hidden; width: 73.8651685393258%; overflow: hidden;"></div></div>	
-		<div class="tp-bullets simplebullets round hidebullets" style="bottom: 20px; left: 50%; margin-left: -51px;"><div class="bullet first"></div><div class="bullet selected"></div><div class="bullet last"></div><div class="tpclear"></div></div><div style="position: absolute; top: 429px; margin-top: -24px; left: 20px;" class="tp-leftarrow tparrows default hidearrows"></div><div style="position: absolute; top: 429px; margin-top: -24px; right: 20px;" class="tp-rightarrow tparrows default hidearrows"></div></div>
-
-	</section>	
-	
-	
-	
-	<!-- ABOUT SECTION -->
-	
-	<section id="about">
-	
-		<div class="double-space"></div>
-		
-		<div class="centered-wrapper">	
-		
-			<h1 class="section-title">We`re Patti Studio</h1>	
-			
-			<div class="space"></div>
-		
-			<div class="percent-one-third box fadeInDown animated" style="visibility: visible;">
-				<h2 class="bold-style">WE CARE.</h2>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>				
-			</div>
-			
-			<div class="percent-one-third box fadeInDown animated" style="visibility: visible;">
-				<h2 class="bold-style">WE DELIVER.</h2>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>		
-			</div>		
-
-			<div class="percent-one-third column-last box fadeInDown animated" style="visibility: visible;">
-				<h2 class="bold-style">WE`RE CREATIVE.</h2>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>			
-			</div>
-			
-			<div class="separator"></div>
-			
-			<div class="percent-two-third box fadeInDown animated" style="visibility: visible;">
-				<h2 class="bold-style">ABOUT US</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam sapien, auctor sed blandit nec, adipiscing eget elit. Duis tempor elementum quam consequat condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.Praesent volutpat nisl fringilla felis sodales elementum. Ut commodo arcu massa.</p>
-				<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...</p>
-			</div>
-			
-			<div class="percent-one-third column-last">
-				<div class="skillbar clearfix" data-percent="65%">
-					<div class="skillbar-title"><span>HTML5</span></div>
-					<div class="skillbar-bar" style="width: 65%;"></div>
-					<div class="skill-bar-percent" style="left: 65%; opacity: 1; margin-left: -19px;">65%</div>
-				</div>	
-				
-				<div class="skillbar clearfix" data-percent="45%">
-					<div class="skillbar-title"><span>Illustrator</span></div>
-					<div class="skillbar-bar" style="width: 45%;"></div>
-					<div class="skill-bar-percent" style="left: 45%; opacity: 1; margin-left: -19px;">45%</div>
-				</div>		
-
-				<div class="skillbar clearfix" data-percent="95%">
-					<div class="skillbar-title"><span>Photoshop</span></div>
-					<div class="skillbar-bar" style="width: 95%;"></div>
-					<div class="skill-bar-percent" style="left: 95%; opacity: 1; margin-left: -19px;">95%</div>
-				</div>		
-			</div>
-			
-			<div class="double-space"></div>
-		</div>
-		
-	</section>
-	
-	<section id="team">	
-		
-		<div class="double-space"></div>	
-		<div class="centered-wrapper">
-			
-			<h1 class="section-title">Our Team</h1>
-			<h2 class="section-tagline">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse</h2>
-			
-			<div class="space"></div>
-		
-			<div class="team">
-				<div class="percent-one-third box fadeInDown animated" style="visibility: visible;">
-					<div class="team-member">
-						<a href="/img/member1.jpg" rel="prettyPhoto" title="John Doe">
-							<span class="item-on-hover"><span class="hover-image"><i class="fa fa-search"></i></span></span>
-							<img class="team-avatar" src="/img/member1.jpg" alt=" ">
-						</a>
-						<div class="team-text">
-							<h3><span>JOHN DOE</span></h3>
-							<h6>Web Developer</h6>
-							<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum.</p>					
-						</div>		
-						<div class="team-social">
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-envelope"></i></a>
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-facebook"></i></a>
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-twitter"></i></a>
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-google-plus"></i></a>
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-linkedin"></i></a>
-						</div>						
-					</div><!--end team-member-->	
-				</div><!--end one-third-->
-					
-				<div class="percent-one-third box fadeInDown animated" style="visibility: visible;">
-					<div class="team-member">
-						<a href="/img/member2.jpg" rel="prettyPhoto" title="Andrew Clark">
-							<span class="item-on-hover"><span class="hover-image"><i class="fa fa-search"></i></span></span>
-							<img class="team-avatar" src="/img/member2.jpg" alt=" ">
-						</a>
-						<div class="team-text">
-							<h3><span>ANDREW CLARK</span></h3>
-							<h6>Marketing Manager</h6>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>					
-						</div>		
-						<div class="team-social">
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-facebook"></i></a>
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-twitter"></i></a>
-						</div>				
-					</div><!--end team-member-->	
-				</div><!--end one-third-->			
-				
-				<div class="percent-one-third column-last box fadeInDown animated" style="visibility: visible;">
-					<div class="team-member">
-						<a href="/img/member4.jpg" rel="prettyPhoto" title="Patrick Smith">
-							<span class="item-on-hover"><span class="hover-image"><i class="fa fa-search"></i></span></span>
-							<img class="team-avatar" src="/img/member4.jpg" alt=" ">
-						</a>
-						<div class="team-text">
-							<h3><span>PATRICK SMITH</span></h3>
-							<h6>Marketing Manager</h6>
-							<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>					
-						</div>		
-						<div class="team-social">
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-envelope"></i></a>
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-facebook"></i></a>
-							<a href="http://www.deliciousthemes.com/demo/patti/#"><i class="fa fa-twitter"></i></a>
-						</div>						
-					</div><!--end team-member-->	
-				</div><!--end one-third-->			
-			</div><!--end team-->	
-
-			<div class="double-space"></div>
-		</div>
-	</section><!--end centered-wrapper-->
-	
-	
-	
-	<!-- QUOTE SECTION -->
-	<section class="parallax-section" id="quote" style="background-position: 50% -49px;">
-		<div class="darker-overlay">	
-			<section class="centered-wrapper">
-				<div class="double-space"></div>
-				
-				<h2 class="parallax-quote">"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."</h2>	
-				<span class="quote-author">Antoine de Saint-Exupéry</span>
-				
-				<div class="double-space"></div>
-			</section>	
-		</div>
-	</section>		
-	
 	
 	<!-- WORK SECTION -->
 	<section id="work">	
 	
 		<div class="double-space"></div>
 		
-		<h1 class="section-title box fadeInDown animated" style="visibility: visible;">Our Work</h1>
+		<h1 class="section-title box fadeInDown animated" style="visibility: visible;">Sunny x Jules</h1>
 		
 		<div class="space"></div>
 		
@@ -402,7 +163,6 @@
 					<img src="/img/thumbnail-2.jpg" alt="" style="width: 406px; height: auto;">
 				</a>
 			</li>					
-		
 			<li class="grid-item photography item-long isotope-item" style="width: 406px; height: 156px; position: absolute; left: 410px; top: 320px;">
 				<a href="http://www.deliciousthemes.com/demo/patti/images/portfolio/maybe-one-day-fashion.jpg" title="Photoshoot for a Fashion Store" rel="prettyPhoto[pp_gal]">
 					<div class="grid-item-on-hover">
@@ -413,8 +173,7 @@
 					</div>
 					<img src="/img/thumbnail-long-2.jpg" alt="" style="width: 406px; height: auto;">
 				</a>
-			</li>		
-			
+			</li>				
 			<li class="grid-item item-small isotope-item" style="width: 201px; height: 156px; position: absolute; left: 820px; top: 320px;">
 				<a href="http://www.deliciousthemes.com/demo/patti/portfolio-item-5.html">
 					<div class="grid-item-on-hover">
