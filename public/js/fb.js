@@ -16,14 +16,11 @@ window.fbAsyncInit = function() {
 
 
 
-  function Login1()
-  {
+  function Login1(){
       FB.login(function(response) {
-         if (response.authResponse) 
-         {
+         if (response.authResponse) {
               getUserInfo();
-          } else 
-          {
+          } else {
            console.log('User cancelled login or did not fully authorize.');
           }
        },{scope: 'email,user_photos,user_videos'});
